@@ -331,9 +331,9 @@ DocumentRetriever.prototype.all = function (this: DocumentRetriever, delay = 0, 
 
 
 export class Scan extends DocumentRetriever {
-	exec(): Promise<ScanResponse<Document[]>>;
-	exec(callback: CallbackType<ScanResponse<Document[]>, AWSError>): void;
-	exec (callback?: CallbackType<ScanResponse<Document[]>, AWSError>): Promise<ScanResponse<Document[]>> | void {
+	exec(): Promise<ScanResponse<Document>>;
+	exec(callback: CallbackType<ScanResponse<Document>, AWSError>): void;
+	exec (callback?: CallbackType<ScanResponse<Document>, AWSError>): Promise<ScanResponse<Document>> | void {
 		return super.exec(callback);
 	}
 
@@ -348,9 +348,9 @@ export class Scan extends DocumentRetriever {
 }
 
 export class Query extends DocumentRetriever {
-	exec(): Promise<QueryResponse<Document[]>>;
-	exec(callback: CallbackType<QueryResponse<Document[]>, AWSError>): void;
-	exec (callback?: CallbackType<QueryResponse<Document[]>, AWSError>): Promise<QueryResponse<Document[]>> | void {
+	exec(): Promise<QueryResponse<Document>>;
+	exec(callback: CallbackType<QueryResponse<Document>, AWSError>): void;
+	exec (callback?: CallbackType<QueryResponse<Document>, AWSError>): Promise<QueryResponse<Document>> | void {
 		return super.exec(callback);
 	}
 
